@@ -52,17 +52,19 @@ function startQuiz() {
             button.innerHTML = questions[currentQuestionIndex].options[btnIndex];
             button.classList.add("btn");
             answerButton.appendChild(button);
+            btnIndex++
+
         });
+    }
+}
 
 
+function resetState() {
+    nextButtton.style.display = "none"
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 
-    function resetState() {
-        nextButtton.style.display = "none"
-        while (answerButtons.firstChild) {
-            answerButtons.removeChild(answerButtons.firstChild);
-        }
 
-
-    }
-    startQuiz();
+}
+startQuiz();
