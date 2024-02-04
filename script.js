@@ -46,13 +46,17 @@ function startQuiz() {
         questionElement.innerHTML = questionNo + "." + currentQuestion.
             question;
 
-        currentQuestion.answer.forEach(answer => {
+        currentQuestion.answers.forEach(answer => {
 
             const button = document.createElement("button");
             button.innerHTML = answer.text;
             button.classList.add("btn");
             answerButtons.appendChild(button);
-            btnIndex++
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+
 
         });
     }
@@ -67,7 +71,10 @@ function resetState() {
 
 
 }
+
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "correct";
+}
+
 startQuiz();
-
-
-[currentQuestionIndex].options[btnIndex];
