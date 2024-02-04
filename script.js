@@ -46,10 +46,10 @@ function startQuiz() {
         questionElement.innerHTML = questionNo + "." + currentQuestion.
             question;
 
-        currentQuestion.answers.forEach(answer => {
+        currentQuestion.options.forEach(answer => {
 
             const button = document.createElement("button");
-            button.innerHTML = answer.text;
+            button.innerHTML = answer;
             button.classList.add("btn");
             answerButtons.appendChild(button);
             if (answer.correct) {
@@ -75,6 +75,32 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "correct";
+}
+
+function showScore() {
+    resetState();
+    questionElement.innerHTML = 'Your score ${score} out of ${questions.length}!';
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block"
+
+}
+
+function handleNextButton()
+currentQuestionIndex++;
+if (currentQuestionIndex < questions.length) {
+    showQuestion();
+} else {
+    showScore();
+
+
+}
+
+nextButton.addEventListener("click"), () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
 }
 
 startQuiz();
