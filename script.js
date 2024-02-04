@@ -27,7 +27,7 @@ const questions = [
 
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("answer-buttons");
+const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -46,12 +46,12 @@ function startQuiz() {
         questionElement.innerHTML = questionNo + "." + currentQuestion.
             question;
 
-        currentQuestion.options.forEach(answer => {
-            btnIndex++
+        currentQuestion.answer.forEach(answer => {
+
             const button = document.createElement("button");
-            button.innerHTML = questions[currentQuestionIndex].options[btnIndex];
+            button.innerHTML = answer.text;
             button.classList.add("btn");
-            answerButton.appendChild(button);
+            answerButtons.appendChild(button);
             btnIndex++
 
         });
@@ -68,3 +68,6 @@ function resetState() {
 
 }
 startQuiz();
+
+
+[currentQuestionIndex].options[btnIndex];
