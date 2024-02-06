@@ -1,26 +1,19 @@
 # Code-Quiz
 
-Starting with my index.html file, I started with the necessary basics such as obvioosuly having the docttype, met-charset, the necesary link to connect the css file with the html file, and header, and body tags. After all fo this was added then I began to start with the code that was needed to begin the code quiz challenge.
+As professional developer, I created a Code quiz with questions that have to do with coding in programming. It has four quesitons and you have four options to choose from. You get mutliple tries. The most important thing I learned was how to create a Code Quiz and what was the required coding to start and finish it.
+
+## Installation:
+https://simplestepscode.com/javascript-quiz-tutorial/
 
 
+## Usage:
+!![(<Screenshot 2024-02-06 125557.png>)]
+!![(<Screenshot 2024-02-06 125711.png>)](assets/images/screenshot.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Credits:
+Google.com
+Youtube.com
 
 
 MIT License

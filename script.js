@@ -40,26 +40,26 @@ function startQuiz() {
     nextButton.innerHTML = "Next";
     showQuestion();
 
-    function showQuestion() {
-        let currentQuestion = questions[currentQuestionIndex];
-        let questionNo = currentQuestionIndex + 1;
-        questionElement.innerHTML = questionNo + "." + currentQuestion.
-            question;
+}
+function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + "." + currentQuestion.
+        question;
+    answerButtons.innerHTML = ""
+    currentQuestion.options.forEach(answer => {
 
-        currentQuestion.options.forEach(answer => {
-
-            const button = document.createElement("button");
-            button.innerHTML = answer;
-            button.classList.add("btn");
-            answerButtons.appendChild(button);
-            if (answer.correct) {
-                button.dataset.correct = answer.correct;
-            }
-            button.addEventListener("click", selectAnswer);
+        const button = document.createElement("button");
+        button.innerHTML = answer;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
 
 
-        });
-    }
+    });
 }
 
 
