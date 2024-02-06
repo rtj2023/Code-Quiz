@@ -13,7 +13,7 @@ const questions = [
 
     },
     {
-        question: "A variable inside a fucntion is _?",
+        question: "A variable inside a function is _?",
         options: ["Outside", "Inside", "Local", "Global"],
         answer: "Local"
     }, {
