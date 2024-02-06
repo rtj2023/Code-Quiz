@@ -8,11 +8,13 @@ https://simplestepscode.com/javascript-quiz-tutorial/
 
 ## Usage:
 ![Screenshot 1](documents/rebeccaPortfolio/assets/images/screenshot 1.png)
+
 ![Screenshot 2](documents/rebeccaPortfolio/assets/images/screenshot 2.png)
 
 
 ## Credits:
 Google.com
+
 Youtube.com
 
 
