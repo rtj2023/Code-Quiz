@@ -7,8 +7,8 @@ https://simplestepscode.com/javascript-quiz-tutorial/
 
 
 ## Usage:
-!![(<Screenshot 2024-02-06 125557.png>)]
-!![(<Screenshot 2024-02-06 125711.png>)](assets/images/screenshot.png)
+![(<Screenshot 2024-02-06 125557.png>)](documents/rebeccaPortfolio/assets/images/screenshot.png)
+![(<Screenshot 2024-02-06 125711.png>)](documents/rebeccaPortfolio/assets/images/screenshot.png)
 
 
 ## Credits:
