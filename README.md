@@ -7,9 +7,9 @@ https://simplestepscode.com/javascript-quiz-tutorial/
 
 
 ## Usage:
-![Screenshot 1](./assets/images/screenshot_1.png)
+![Screenshot 1](./assets/screenshot_1.png)
 
-![Screenshot 2](./assets/images/screenshot_2.png)
+![Screenshot 2](./assets/screenshot_2.png)
 
 
 ## Credits:
