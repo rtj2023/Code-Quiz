@@ -70,3 +70,11 @@
      cursor: pointer;
      display: block;
  }
+
+ .correct {
+     background: green;
+ }
+
+ .incorrect {
+     background: red;
+ }
