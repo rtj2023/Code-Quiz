@@ -75,7 +75,18 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "correct";
+    if (isCorrect)
+        selectedBtn.classList.add("correct");
+    else
+        selectedBtn.classList.add("incorrect");
 }
+
+{
+
+}
+
+
+
 
 function showScore() {
     resetState();
@@ -97,7 +108,7 @@ function handleNextButton() {
 }
 
 
-}
+
 
 function handleNextButton() {
     currentQuestionIndex++;
