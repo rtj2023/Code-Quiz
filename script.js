@@ -25,10 +25,10 @@ const questions = [
 ];
 
 // let timeleft = document.querySelector(".time-left");
-setInterval(myTimer, 10s);
+setInterval(myTimer, 1000);
 function myTimer() {
     const date = new Date();
-    document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+    document.getElementById("timer").innerHTML = date.toLocaleTimeString();
 }
 
 
