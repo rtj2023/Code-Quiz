@@ -24,6 +24,8 @@ const questions = [
     }
 ];
 
+let timeleft = document.querySelector(".time-left");
+
 
 
 const questionElement = document.getElementById("question");
@@ -81,9 +83,10 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
-    console.log(selectedBtn)
+    if (isCorrect) {
+        score++;
+    }
 
-    console.log(isCorrect)
     if (isCorrect)
         selectedBtn.classList.add("correct");
     else
