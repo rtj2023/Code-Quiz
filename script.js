@@ -70,7 +70,7 @@ function showQuestion() {
 
 
 function resetState() {
-    nextButtton.style.display = "none"
+    nextButton.style.display = "none"
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -99,7 +99,7 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = 'Your score ${score} out of ${questions.length}!';
+    questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block"
 
