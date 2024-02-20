@@ -24,11 +24,11 @@ const questions = [
     }
 ];
 
-// let timeleft = document.querySelector(".time-left");
+let time = 10s
 setInterval(myTimer, 1000);
 function myTimer() {
     const date = new Date();
-    document.getElementById("timer").innerHTML = date.toLocaleTimeString();
+    document.getElementById("timer").innerHTML = time time--
 }
 
 
