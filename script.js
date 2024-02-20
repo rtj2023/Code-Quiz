@@ -24,7 +24,12 @@ const questions = [
     }
 ];
 
-let timeleft = document.querySelector(".time-left");
+// let timeleft = document.querySelector(".time-left");
+setInterval(myTimer, 10s);
+function myTimer() {
+    const date = new Date();
+    document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
 
 
 
