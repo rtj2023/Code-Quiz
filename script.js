@@ -25,7 +25,7 @@ const questions = [
 ];
 
 let time = 15
-const intervalid = setInterval(myTimer, 1000);
+let intervalid;
 function myTimer() {
     const date = new Date();
     document.getElementById("timer").innerHTML = 'Time left:' + time + 's'
