@@ -28,8 +28,7 @@ let time = 15
 const intervalid = setInterval(myTimer, 1000);
 function myTimer() {
     // const date = new Date();
-    document.getElementById("timer").innerHTML = time
-    time--;
+    document.getElementById("timer").innerHTML = 'Time left:' + time + 's'
 
     if (time < 0) {
         clearInterval(intervalid);
