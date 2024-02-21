@@ -25,11 +25,15 @@ const questions = [
 ];
 
 let time = 15
-setInterval(myTimer, 1000);
+const intervalid = timer setInterval(myTimer, 1000);
 function myTimer() {
-    const date = new Date();
+    // const date = new Date();
     document.getElementById("timer").innerHTML = time
-    time--
+    time--;
+
+    if (time < 0) {
+        clearInterval(intervalid);
+    }
 }
 
 
