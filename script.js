@@ -27,8 +27,9 @@ const questions = [
 let time = 15
 const intervalid = setInterval(myTimer, 1000);
 function myTimer() {
-    // const date = new Date();
+    const date = new Date();
     document.getElementById("timer").innerHTML = 'Time left:' + time + 's'
+    time--;
 
     if (time < 0) {
         clearInterval(intervalid);
@@ -43,12 +44,14 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
-
 let btnIndex = 0
+
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    time = 15;
     nextButton.innerHTML = "Next";
+    intervalid = setInterval(myTimer, 1000)
     showQuestion();
 
 }
