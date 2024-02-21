@@ -25,7 +25,7 @@ const questions = [
 ];
 
 let time = 15
-const intervalid = timer setInterval(myTimer, 1000);
+const intervalid = setInterval(myTimer, 1000);
 function myTimer() {
     // const date = new Date();
     document.getElementById("timer").innerHTML = time
@@ -107,9 +107,6 @@ function selectAnswer(e) {
 
 }
 
-
-
-
 function showScore() {
     resetState();
     questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
@@ -120,27 +117,24 @@ function showScore() {
 
 // submitScoreBtn.addEventListener("click", function highscore() {
 
-if (highscoreInputName.value === "") {
-    alert("Initials cannot be blank");
-    // return false;
-} else {
-    var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-    var currentUser = highscoreInputName.value.trim();
-    var currentHighscore = {
-        name: currentUser,
-        score: score
-    };
+// if (highscoreInputName.value === "") {
+//     alert("Initials cannot be blank");
+//     // return false;
+// } else {
+//     var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+//     var currentUser = highscoreInputName.value.trim();
+//     var currentHighscore = {
+//         name: currentUser,
+//         score: score
+//     };
 
-    gameoverDiv.style.display = "none";
-    highscoreContainer.style.display = "flex";
-    highscoreDiv.style.display = "block";
-    endGameBtns.style.display = "flex";
 
-    savedHighscores.push(currentHighscore);
-    localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
-    generateHighscores();
 
-}
+// savedHighscores.push(currentHighscore);
+//  localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+//  generateHighscores();
+
+// }
 
 
 
