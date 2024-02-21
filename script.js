@@ -24,7 +24,7 @@ const questions = [
     }
 ];
 
-let time = 15,14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+let time = 15
 setInterval(myTimer, 1000);
 function myTimer() {
     const date = new Date();
@@ -114,63 +114,63 @@ function showScore() {
 
 }
 
-submitScoreBtn.addEventListener("click", function highscore() {
+// submitScoreBtn.addEventListener("click", function highscore() {
 
-    if (highscoreInputName.value === "") {
-        alert("Initials cannot be blank");
-        return false;
+if (highscoreInputName.value === "") {
+    alert("Initials cannot be blank");
+    // return false;
+} else {
+    var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+    var currentUser = highscoreInputName.value.trim();
+    var currentHighscore = {
+        name: currentUser,
+        score: score
+    };
+
+    gameoverDiv.style.display = "none";
+    highscoreContainer.style.display = "flex";
+    highscoreDiv.style.display = "block";
+    endGameBtns.style.display = "flex";
+
+    savedHighscores.push(currentHighscore);
+    localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+    generateHighscores();
+
+}
+
+
+
+
+function handleNextButton() {
+
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
     } else {
-        var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-        var currentUser = highscoreInputName.value.trim();
-        var currentHighscore = {
-            name: currentUser,
-            score: score
-        };
-
-        gameoverDiv.style.display = "none";
-        highscoreContainer.style.display = "flex";
-        highscoreDiv.style.display = "block";
-        endGameBtns.style.display = "flex";
-
-        savedHighscores.push(currentHighscore);
-        localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
-        generateHighscores();
-
+        showScore();
     }
 }
 
 
 
-function handleNextButton() {
-
-
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            showQuestion();
-        } else {
-            showScore();
-        }
-    }
-
-
-
 
 function handleNextButton() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            showQuestion();
-        } else {
-            showScore();
-        }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
     }
+}
 
 nextButton.addEventListener("click", () => {
-        if (currentQuestionIndex < questions.length) {
-            handleNextButton();
-        } else {
-            startQuiz();
-        }
-    })
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+})
 
 
 startQuiz();
